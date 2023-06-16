@@ -112,7 +112,7 @@ fun Login(navController: NavController, onLoginSuccess: () -> Unit) {
                 onValueChange = { password = it },
                 label = { Text("Contraseña", color = Color.White) },
                 modifier = Modifier.fillMaxWidth(),
-                leadingIcon = { Icon(Icons.Filled.Lock, contentDescription = null) },
+                leadingIcon = { Icon(Icons.Filled.Lock, contentDescription = null,  tint = Color.White) },
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     textColor = Color.White,
                     cursorColor = Color.White,
@@ -125,7 +125,8 @@ fun Login(navController: NavController, onLoginSuccess: () -> Unit) {
                     IconButton(onClick = { passwordVisible = !passwordVisible }) {
                         Icon(
                             imageVector = if (passwordVisible) Icons.Filled.Visibility else Icons.Filled.VisibilityOff,
-                            contentDescription = if (passwordVisible) "Ocultar contraseña" else "Mostrar contraseña"
+                            contentDescription = if (passwordVisible) "Ocultar contraseña" else "Mostrar contraseña",
+                            tint = Color.White
                         )
                     }
                 }
